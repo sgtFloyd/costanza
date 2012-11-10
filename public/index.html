@@ -13,8 +13,6 @@
 
     <script type="text/javascript">
       jQuery(function($){
-        var num_slides = 19; // Update when new images are added!
-
         $.supersized({
           // Functionality
           start_slide       : 0,      // Start slide (0 is random)
@@ -31,12 +29,7 @@
           fit_landscape     : 0,      // Landscape images will not exceed browser width
 
           // Components
-          slides : function(){        // Slideshow Images
-            var slides = [];
-            for (var i=1; i<=num_slides; i++)
-              slides.push({image: 'img/'+(i<10?'0'+i:i)+'.gif'});
-            return slides;
-          }()
+          slides : [{image: '.gif'}]  // Slideshow Images
         });
 
         $('body').click( function(){window.location.reload();} );
