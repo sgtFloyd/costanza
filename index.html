@@ -2,7 +2,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-
     <title>I N S T A N T  C O S T A N Z A</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
@@ -17,7 +16,6 @@
         var num_slides = 19; // Update when new images are added!
 
         $.supersized({
-
           // Functionality
           start_slide       : 0,      // Start slide (0 is random)
           new_window        : 1,      // Image links open in new window/tab
@@ -39,15 +37,26 @@
               slides.push({image: 'img/'+(i<10?'0'+i:i)+'.gif'});
             return slides;
           }()
-
         });
+
+        $('body').click( function(){window.location.reload();} );
       });
 
     </script>
-
+    <style type="text/css">
+      h3{padding:10px}
+      #content{
+        background-color:rgba(255,255,255,0.25);
+        position:absolute;
+        bottom:0px;
+      }
+    </style>
   </head>
 
-<body>
+  <body>
+    <div id="content">
+      <h3>click anywhere to reload</h3>
+    </div>
+  </body>
 
-</body>
 </html>
