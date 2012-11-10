@@ -14,6 +14,8 @@
     <script type="text/javascript">
 
       jQuery(function($){
+        var num_slides = 19; // Update when new images are added!
+
         $.supersized({
 
           // Functionality
@@ -31,12 +33,12 @@
           fit_landscape     : 0,      // Landscape images will not exceed browser width
 
           // Components
-          slides : [
-            {image : 'img/01.gif'},
-            {image : 'img/02.gif'}
-          ]
-
-
+          slides : function(){        // Slideshow Images
+            var slides = [];
+            for (var i=1; i<=num_slides; i++)
+              slides.push({image: 'img/'+(i<10?'0'+i:i)+'.gif'});
+            return slides;
+          }()
 
         });
       });
