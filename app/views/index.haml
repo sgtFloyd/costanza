@@ -1,0 +1,68 @@
+:plain
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+      <title>I N S T A N T  C O S T A N Z A</title>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+      <link href="/favicon.ico" rel="shortcut icon" />
+
+      <link rel="stylesheet" href="css/supersized.core.css" type="text/css" media="screen" />
+
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+      <script type="text/javascript" src="js/supersized.core.3.2.1.min.js"></script>
+
+      <script type="text/javascript">
+        jQuery(function($){
+          $.supersized({
+            // Functionality
+            start_slide       : 0,      // Start slide (0 is random)
+            new_window        : 1,      // Image links open in new window/tab
+            image_protect     : 1,      // Disables image dragging and right click with Javascript
+
+            // Size & Position
+            min_width         : 0,      // Min width allowed (in pixels)
+            min_height        : 0,      // Min height allowed (in pixels)
+            vertical_center   : 1,      // Vertically center background
+            horizontal_center : 1,      // Horizontally center background
+            fit_always        : 0,      // Image will never exceed browser width or height (Ignores min. dimensions)
+            fit_portrait      : 1,      // Portrait images will not exceed browser height
+            fit_landscape     : 0,      // Landscape images will not exceed browser width
+
+            // Components
+
+="slides: ["+gifs.map{|g| "{image: \"#{g.gsub(/public\//, '')}\"}"}.join(",\n")+"]"
+
+:plain
+          });
+
+          $('body').click( function(){window.location.reload();} );
+        });
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-35181758-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+      <style type="text/css">
+        h3{padding:10px}
+        #content{
+          background-color:rgba(255,255,255,0.25);
+          position:absolute;
+          bottom:0px;
+        }
+      </style>
+    </head>
+
+    <body>
+      <div id="content">
+        <h3>click anywhere to reload</h3>
+      </div>
+    </body>
+
+  </html>
